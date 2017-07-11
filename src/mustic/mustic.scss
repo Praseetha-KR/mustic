@@ -1,0 +1,62 @@
+/* ==========================================================================
+   #Reset
+   ========================================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+/* ==========================================================================
+   #Generic
+   ========================================================================== */
+html, body, .root, .mustic {
+    height: 100%;
+}
+
+
+
+
+
+
+/* ==========================================================================
+   #Module
+   ========================================================================== */
+$background-default: black;
+$foreground-default: white;
+
+.mustic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: $background-default;
+    color: $foreground-default;
+    &__title {
+        font-size: 3em;
+    }
+    &__variables {
+        margin-bottom: 2em;
+        font-size: 1.5em;
+    }
+    &__label {
+        display: block;
+        border: none;
+        border-radius: 0.3em;
+        margin: 0.5em;
+        padding: 0.5em 1.2em 0.5em;
+        font-size: 2em;
+        cursor: pointer;
+        background: $foreground-default;
+        color: $background-default;
+    }
+    &__input {
+        display: none;
+    }
+}
