@@ -7,12 +7,20 @@ const uglify = require('gulp-uglify');
 const gutil = require('gulp-util');
 const babel = require('gulp-babel');
 const cssnano = require('gulp-cssnano');
+const connect = require('gulp-connect');
 
 const srcFolder = './src/';
 const srcFile = 'index.js';
 const destFolder = './build/';
 const destJSFile = 'mustic.min.js';
 const destCSSFile = 'mustic.min.css';
+
+gulp.task('server', () => {
+    connect.server({
+        port: 8000,
+        livereload: true
+    });
+});
 
 gulp.task('js', () => {
     gulp
@@ -49,4 +57,7 @@ gulp.task('watch', () => {
     gulp.watch(srcFolder + '**/*.scss', ['scss']);
 });
 
-gulp.task('default', ['js', 'scss', 'watch']);
+gulp.task('dev', ['js', 'scss', 'server', 'watch']);
+gulp.task('build', ['js', 'scss']);
+gulp.task('serve', ['server']);
+gulp.task('default', ['js', 'scss', 'server']);

@@ -14,13 +14,17 @@ Install local dependencies from project's root folder:
 ```
 yarn
 ```
-`gulp` & `simplehttpserver` are required as global npm dependencies.
 
 ### Building
+To do initial build:
+```
+npm run build
+```
+
+To watch for changes:
 ```
 npm run dev
 ```
-This will trigger gulp tasks for build & start watch for changes
 
 ### Running
 ```

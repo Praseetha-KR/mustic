@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "gulp": "^3.9.1",
-    "simplehttpserver": "^0.0.6"
+    "gulp-connect": "^5.0.0"
   },
   "name": "mustic",
   "version": "0.0.1",
@@ -21,8 +21,9 @@
     "watchify": "^3.9.0"
   },
   "scripts": {
-    "start": "simplehttpserver",
-    "dev": "gulp"
+    "build": "gulp build",
+    "start": "gulp serve",
+    "dev": "gulp dev"
   },
   "repository": {
     "type": "git",
