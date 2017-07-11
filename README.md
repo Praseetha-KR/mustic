@@ -14,17 +14,13 @@ Install local dependencies from project's root folder:
 ```
 yarn
 ```
+`gulp` & `simplehttpserver` are required as global npm dependencies.
 
 ### Building
-To do initial build:
-```
-npm run build
-```
-
-To watch for changes:
 ```
 npm run dev
 ```
+This will trigger gulp tasks for build & start watch for changes
 
 ### Running
 ```
@@ -32,5 +28,8 @@ npm start
 ```
 This will start the server up and running at [http://localhost:8000](http://localhost:8000)
 
-## ⚠️ Warning
+## Demo
+> ### ⚠️ Warning
 > This app's generated sound is not optimized. **The sound is really creepy** which might affect your ear/brain, please be aware!! ..and keep mobile volume down if you are testing.
+
+#### [Demo in now.sh](https://mustic-pnfduhxyvi.now.sh/) - works only in mobile devices
