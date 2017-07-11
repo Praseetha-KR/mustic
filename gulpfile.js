@@ -57,7 +57,6 @@ gulp.task('watch', () => {
     gulp.watch(srcFolder + '**/*.scss', ['scss']);
 });
 
-gulp.task('dev', ['js', 'scss', 'server', 'watch']);
-gulp.task('build', ['js', 'scss']);
-gulp.task('serve', ['server']);
 gulp.task('default', ['js', 'scss', 'server']);
+gulp.task('build', ['js', 'scss']);
+gulp.task('dev', ['js', 'scss', 'server', 'watch']);
