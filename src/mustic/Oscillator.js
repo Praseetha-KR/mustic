@@ -9,11 +9,9 @@ class Oscillator {
         this.osc.frequency.value = freq;
     }
     start() {
-        console.log('started');
         this.osc.start();
     }
     stop() {
-        console.log('stopped');
         this.osc.stop(0);
     }
 }

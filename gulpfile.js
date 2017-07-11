@@ -27,7 +27,7 @@ gulp.task('js', () => {
                 presets: ['es2015']
             })
         )
-        // .pipe(uglify())
+        .pipe(uglify())
         .on('error', function(err) {
             gutil.log(gutil.colors.red('[Error]'), err.toString());
         })

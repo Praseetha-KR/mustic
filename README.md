@@ -3,12 +3,18 @@
 
 **Mustic** is an Experimental app which takes input from the *Device Orientation API* and gives to *Web Audio API*. Basically what it does is listening to the orientation change, combines the (alpha, beta, gamma) value to produce frequency for the audio output.
 
+<img src="screenshot.jpg" width="200">
+
+
+
 ## Getting started
 ### Setting up Dev
-Install dependencies from project's root folder:
+
+Install local dependencies from project's root folder:
 ```
 yarn
 ```
+`gulp` & `simplehttpserver` are required as global npm dependencies.
 
 ### Building
 ```
