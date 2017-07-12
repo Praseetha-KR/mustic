@@ -2,6 +2,7 @@
   "dependencies": {
     "gulp": "^3.9.1",
     "gulp-connect": "^5.0.0",
+    "jest": "^20.0.4",
     "serve": "^6.0.2"
   },
   "name": "mustic",
