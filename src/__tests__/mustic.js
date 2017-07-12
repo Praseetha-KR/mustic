@@ -18,8 +18,8 @@ describe('Mustic module', () => {
         const Music = require('../mustic/Music');
 
         const { dom, music } = mustic(dummyRoot);
-        expect(dom instanceof Dom).toBeTruthy();
-        expect(music instanceof Music).toBeTruthy();
+        expect(dom).toBeInstanceOf(Dom);
+        expect(music).toBeInstanceOf(Music);
     });
 
     test('should start listeners click & deviceorientation', () => {
