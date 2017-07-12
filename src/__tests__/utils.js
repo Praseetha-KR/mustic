@@ -3,7 +3,7 @@ afterEach(() => {
     jest.resetModules();
 });
 
-describe('Utils', () => {
+describe('Utils module', () => {
     describe('wholeNumber function', () => {
         test('should convert fractions correctly', () => {
             const { wholeNumber } = require('../utils');

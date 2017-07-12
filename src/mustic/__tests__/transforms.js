@@ -3,7 +3,7 @@ afterEach(() => {
     jest.resetModules();
 });
 
-describe('Transforms', () => {
+describe('Transforms module', () => {
     describe('orientationToTheme function', () => {
         test('should handle invalid alpha, beta, gamma inputs', () => {
             const { orientationToTheme } = require('../transforms');

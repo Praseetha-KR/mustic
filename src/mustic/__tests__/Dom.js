@@ -1,5 +1,5 @@
 describe('Dom class', () => {
-    test('should', () => {
+    test('should provide methods', () => {
         const Dom = require('../Dom');
         const dom = new Dom(document.createElement('div'));
 
