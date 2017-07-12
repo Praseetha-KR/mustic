@@ -1,8 +1,8 @@
 {
   "dependencies": {
+    "assert": "^1.4.1",
     "gulp": "^3.9.1",
     "gulp-connect": "^5.0.0",
-    "jest": "^20.0.4",
     "serve": "^6.0.2"
   },
   "name": "mustic",
@@ -20,7 +20,8 @@
     "gulp-uglify": "^3.0.0",
     "gulp-util": "^3.0.8",
     "vinyl-source-stream": "^1.1.0",
-    "watchify": "^3.9.0"
+    "watchify": "^3.9.0",
+    "jest": "^20.0.4"
   },
   "scripts": {
     "build": "gulp build",
