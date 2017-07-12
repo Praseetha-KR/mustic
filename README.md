@@ -1,6 +1,10 @@
 # mustic
 > 📱🎶 Device as music stick
 
+[![Build Status](https://travis-ci.org/Praseetha-KR/mustic.svg?branch=master)](https://travis-ci.org/Praseetha-KR/mustic)
+[![Coverage Status](https://coveralls.io/repos/github/Praseetha-KR/mustic/badge.svg)](https://coveralls.io/github/Praseetha-KR/mustic?branch=master)
+[![Dependency Status](https://david-dm.org/Praseetha-KR/mustic.svg?maxAge=2592000)](https://david-dm.org/Praseetha-KR/mustic)
+
 **Mustic** is an Experimental app which takes input from the *Device Orientation API* and gives to *Web Audio API*. Basically what it does is listening to the orientation change, combines the (alpha, beta, gamma) value to produce frequency for the audio output.
 
 <img src="screenshot.jpg" width="200">
