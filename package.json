@@ -26,7 +26,10 @@
   "scripts": {
     "build": "gulp build",
     "start": "serve .",
-    "dev": "gulp dev"
+    "dev": "gulp dev",
+    "test": "jest",
+    "test-watch": "jest --watch",
+    "test-coverage": "jest --coverage"
   },
   "repository": {
     "type": "git",
