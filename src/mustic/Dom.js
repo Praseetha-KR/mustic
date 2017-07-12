@@ -28,7 +28,7 @@ class Dom {
         this.display.innerHTML = '0 Hz';
     }
 
-    get isPlaying() {
+    get isChecked() {
         return this.input.checked;
     }
 
