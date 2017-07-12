@@ -7,9 +7,9 @@ const dummyRoot = document.createElement('div');
 dummyRoot.className = 'dummy';
 
 describe('Mustic module', () => {
-    test('should throw error for non node inputs', () => {
+    test('should handle invalid inputs', () => {
         const mustic = require('../mustic');
-        expect(() => mustic('dummy')).toThrowError(TypeError);
+        expect(() => mustic('dummy')).toThrowError();
     });
 
     test('should create instances for Dom & Music classes', () => {

@@ -1,18 +1,17 @@
+const assert = require('assert');
 const Dom = require('./Dom');
 const Music = require('./Music');
 
 function init(root) {
-    try {
-        const dom = new Dom(root);
-        const music = new Music();
+    assert(root instanceof Element);
 
-        dom.listenBtnClick(music);
-        dom.listenDeviceOrientation(music);
+    const dom = new Dom(root);
+    const music = new Music();
 
-        return { dom, music };
-    } catch (e) {
-        throw e;
-    }
+    dom.listenBtnClick(music);
+    dom.listenDeviceOrientation(music);
+
+    return { dom, music };
 }
 
 module.exports = init;
