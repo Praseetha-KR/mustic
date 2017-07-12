@@ -61,4 +61,4 @@ This will start the server up and running at [http://localhost:5000](http://loca
 > ### ⚠️ Warning
 > This app's generated sound is not optimized. **The sound is really creepy** which might affect your ear/brain, please be aware!! ..and keep mobile volume down if you are testing.
 
-#### [Demo](https://mustic-pnfduhxyvi.now.sh/) - works only in mobile devices
+#### [Demo](https://praseetha-kr.github.io/mustic/) - works only in mobile devices
