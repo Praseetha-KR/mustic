@@ -40,7 +40,8 @@ describe('Utils', () => {
             expect(() => percievedContrast([123])).toThrowError();
             expect(() => percievedContrast([0, 0, 0, 0])).toThrowError();
             expect(() => percievedContrast([0, 0, 'a'])).toThrowError();
-            // expect(() => percievedContrast([0, 0, 0])).not.toThrowError();
+            expect(() => percievedContrast([256, 0, 0])).toThrowError();
+            expect(() => percievedContrast([0, 0, 0])).not.toThrowError();
         });
     });
 });
