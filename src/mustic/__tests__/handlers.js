@@ -8,12 +8,7 @@ describe('handlers module', () => {
         test('should update dom & music instances', () => {
             jest.mock('../transforms', () => {
                 return {
-                    orientationToTheme: jest.fn(() => {
-                        return {
-                            background: 'rgb(254, 127, 126)',
-                            foreground: 'black'
-                        };
-                    }),
+                    orientationToTheme: jest.fn(),
                     orientationToMusic: jest.fn(() => 10000)
                 };
             });
@@ -21,8 +16,16 @@ describe('handlers module', () => {
             jest.mock('../Dom');
             jest.mock('../Music');
 
-            const dom = new (require('../Dom'))(document);
+            const mockdom = new (require('../Dom'))(document);
+            const mockSetDisplayFrequency = jest.fn();
+            const mockSetTheme = jest.fn();
+            const dom = Object.assign(mockdom, {
+                setDisplayFrequency: mockSetDisplayFrequency,
+                setTheme: mockSetTheme
+            });
+
             const music = new (require('../Music'))();
+
             const event = new Event('deviceorientation');
 
             const { handleOrientation } = require('../handlers');
@@ -30,11 +33,8 @@ describe('handlers module', () => {
             handleOrientation.call(dom, music, event);
 
             expect(music.frequency).toEqual(10000);
-            expect(dom.displayFrequency).toEqual(10000);
-            expect(dom.theme).toEqual({
-                background: 'rgb(254, 127, 126)',
-                foreground: 'black'
-            });
+            expect(mockSetDisplayFrequency).toHaveBeenCalled();
+            expect(mockSetTheme).toHaveBeenCalled();
         });
     });
 
