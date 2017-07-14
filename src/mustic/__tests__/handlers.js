@@ -52,8 +52,7 @@ describe('handlers module', () => {
             });
             const dom = Object.assign(mockdom, {
                 isChecked: true,
-                setPauseLabel: jest.fn(),
-                setPlayLabel: jest.fn()
+                setBtnLabel: jest.fn()
             });
 
             const { handleClick } = require('../handlers');
@@ -62,8 +61,7 @@ describe('handlers module', () => {
 
             expect(music.play).toHaveBeenCalled();
             expect(music.pause).not.toHaveBeenCalled();
-            expect(dom.setPauseLabel).toHaveBeenCalled();
-            expect(dom.setPlayLabel).not.toHaveBeenCalled();
+            expect(dom.setBtnLabel).toHaveBeenCalled();
         });
 
         test('should pause music on undo check', () => {
@@ -79,8 +77,7 @@ describe('handlers module', () => {
             });
             const dom = Object.assign(mockdom, {
                 isChecked: false,
-                setPauseLabel: jest.fn(),
-                setPlayLabel: jest.fn()
+                setBtnLabel: jest.fn()
             });
 
             const { handleClick } = require('../handlers');
@@ -89,8 +86,7 @@ describe('handlers module', () => {
 
             expect(music.play).not.toHaveBeenCalled();
             expect(music.pause).toHaveBeenCalled();
-            expect(dom.setPauseLabel).not.toHaveBeenCalled();
-            expect(dom.setPlayLabel).toHaveBeenCalled();
+            expect(dom.setBtnLabel).toHaveBeenCalled();
         });
     });
 });

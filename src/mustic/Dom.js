@@ -41,12 +41,11 @@ class Dom {
         this.domobj.container.style.color = theme.foreground;
     }
 
-    setPlayLabel() {
-        this.domobj.label.innerHTML = `${consts.icon.PLAY} Play`;
-    }
-
-    setPauseLabel() {
-        this.domobj.label.innerHTML = `${consts.icon.PAUSE} Pause`;
+    setBtnLabel(type) {
+        this.domobj.label.innerHTML =
+            type === 'play'
+                ? `${consts.icon.PLAY} Play`
+                : `${consts.icon.PAUSE} Pause`;
     }
 
     listenBtnClick(music) {

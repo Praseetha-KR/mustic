@@ -16,10 +16,10 @@ function handleOrientation(music, event) {
 function handleClick(music) {
     if (this.isChecked) {
         music.play();
-        this.setPauseLabel();
+        this.setBtnLabel('play');
     } else {
         music.pause();
-        this.setPlayLabel();
+        this.setBtnLabel('pause');
     }
 }
 

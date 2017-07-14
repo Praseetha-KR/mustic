@@ -14,10 +14,10 @@ describe('Dom class', () => {
         instance.setDisplayFrequency('1000');
         expect(instance.domobj.display.innerHTML).toEqual('1000 Hz');
 
-        instance.setPlayLabel();
+        instance.setBtnLabel('play');
         expect(instance.domobj.label.innerHTML).toEqual('► Play');
 
-        instance.setPauseLabel();
+        instance.setBtnLabel('pause');
         expect(instance.domobj.label.innerHTML).toEqual('▌▌ Pause');
     });
 });
