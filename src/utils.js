@@ -19,9 +19,9 @@ function percievedContrast(rgb) {
 
     // ref: https://www.w3.org/TR/AERT#color-contrast
     const brightness = Math.round(
-        (parseInt(rgb[0]) * 299 +
-            parseInt(rgb[1]) * 587 +
-            parseInt(rgb[2]) * 114) /
+        (parseInt(rgb[0], 10) * 299 +
+            parseInt(rgb[1], 10) * 587 +
+            parseInt(rgb[2], 10) * 114) /
             1000
     );
     return brightness > 125 ? 'black' : 'white';
